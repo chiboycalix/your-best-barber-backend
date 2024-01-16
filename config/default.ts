@@ -16,8 +16,8 @@ const envVarsSchema = Joi.object()
   MAIL_PASSWORD: Joi.string().required().description('Email password'),
   FRONTEND_APP_URL: Joi.string().required().description('Frontend url'),
   ENVIRONMENT: Joi.string().required().description('Environment'),
-  JWT_ACCESS_TOKEN_EXPIRATION: Joi.string().required().description('JWT access token expiration time'),
-  JWT_REFRESH_TOKEN_EXPIRATION: Joi.string().required().description('JWT refresh token expiration time'),
+  JWT_ACCESS_TOKEN_EXPIRES: Joi.string().required().description('JWT access token expiration time'),
+  JWT_REFRESH_TOKEN_EXPIRES: Joi.string().required().description('JWT refresh token expiration time'),
 })
 
 const { value: envVars, error } = envVarsSchema
@@ -40,7 +40,7 @@ export default {
   MAIL_USER: envVars.MAIL_USER,
   MAIL_PASSWORD: envVars.MAIL_PASSWORD,
   FRONTEND_APP_URL: envVars.FRONTEND_APP_URL,
-  enviroment: envVars.ENVIRONMENT,
-  jwtAccessTokenExpiration: envVars.JWT_ACCESS_TOKEN_EXPIRATION,
-  jwtRefreshTokenExpiration: envVars.JWT_REFRESH_TOKEN_EXPIRATION,
+  ENVIRONMENT: envVars.ENVIRONMENT,
+  jwtAccessTokenExpiration: envVars.JWT_ACCESS_TOKEN_EXPIRES,
+  jwtRefreshTokenExpiration: envVars.JWT_REFRESH_TOKEN_EXPIRES,
 }

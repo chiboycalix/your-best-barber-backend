@@ -1,6 +1,6 @@
 import WELCOME_EMAIL from "../mail/welcome-email";
 import config from '../../config/default';
-import NodemailerModule from '../modules/NodeMailerModule';
+import NodemailerModule from '../modules/NodemailerModule';
 import log from "../logging/logger";
 
 const _nodeMailerModule = new NodemailerModule();
