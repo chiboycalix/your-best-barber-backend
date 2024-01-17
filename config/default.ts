@@ -43,4 +43,9 @@ export default {
   ENVIRONMENT: envVars.ENVIRONMENT,
   jwtAccessTokenExpiration: envVars.JWT_ACCESS_TOKEN_EXPIRES,
   jwtRefreshTokenExpiration: envVars.JWT_REFRESH_TOKEN_EXPIRES,
+  sendChamp: {
+    apiKey: envVars.SEND_CHAMP_PUB_KEY,
+    baseUrl: envVars.SEND_CHAMP_BASE_URL,
+    senderId: envVars.SEND_CHAMP_SENDER_ID,
+  },
 }

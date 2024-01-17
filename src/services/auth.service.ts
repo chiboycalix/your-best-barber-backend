@@ -37,4 +37,13 @@ export default class AuthService {
     const user: User = await this.userService.createUser(createBody);
     return { user, OTP_CODE };
   }
+
+  async loginUser(loginPayload: User) {
+    const token = await this.tokenService.generateToken(
+      loginPayload.id,
+      `${loginPayload.firstName} ${loginPayload.lastName}`
+    );
+
+    return token;
+  }
 }
